@@ -19,3 +19,9 @@ module.exports.searchUsers = function(req,res,next) {
         res.status(200).json(list);
     })
 }
+
+module.exports.deleteUser = function(req,res,next) {
+    User.deleteOne( { name: req.body.name }, (err) => {
+        res.status(200).json({msg: 'User deleted'});
+    })
+}
