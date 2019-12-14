@@ -9,4 +9,8 @@ router.get('/', function(req, res, next) {
 
 router.post('/create', UserController.createUser);
 
+router.get('/list', userController.getAllUsers)
+
+router.get('/search', userController.searchUsers)
+
 module.exports = router;
