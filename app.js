@@ -11,11 +11,11 @@ var app = express();
 
 // db setup
 let mongoose = require('mongoose');
-mongoose.connect('mongodb://127.0.0.1:27017', {useNewUrlParser: true});
+mongoose.connect('mongodb://127.0.0.1:27017/mean-mvc', {useNewUrlParser: true});
 let db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function() {
-  console.log('Connected!')
+  console.log('Connected to database MEAN MVC')
 });
 
 // view engine setup
